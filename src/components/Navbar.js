@@ -10,7 +10,7 @@ const lightTheme = {
 };
 
 const darkTheme = {
-  navBackground: "#000",
+  navBackground: "#333333",
   navText: "#fff",
   shadow: "0 2px 5px rgba(0, 0, 0, 0.5)",
 };
@@ -56,18 +56,35 @@ const Menu = styled.ul`
     right: 0;
     background: ${({ theme }) => theme.navBackground};
     display: ${({ open }) => (open ? "flex" : "none")};
-    align-items: center; 
+    align-items: center;
     padding: 1rem;
     box-shadow: ${({ theme }) => theme.shadow};
   }
 `;
 
+// const MenuItem = styled.li`
+//   padding: 0.5rem 0;
+
+//   a {
+//     text-decoration: none;
+//     color: inherit;
+//   }
+// `;
 const MenuItem = styled.li`
   padding: 0.5rem 0;
-
   a {
     text-decoration: none;
     color: inherit;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      color: #007bff;
+    }
   }
 `;
 
